@@ -1,6 +1,6 @@
 import React from "react";
 import { store } from "@risingstack/react-easy-state";
-import { FontAwesome } from "react-web-vector-icons";
+import { FaDashcube, FaInfo } from "react-icons/fa";
 
 import { useHistory } from "react-router-dom";
 export const state = store({
@@ -21,18 +21,19 @@ export async function initialized() {
       id: 1,
       title: "Dashboard",
       route: "dashboard",
-      icon: <FontAwesome name="bell" color="white" size={30} />,
+      icon: <FaDashcube size={20} color="blue" />,
     },
     {
       id: 2,
       title: "About",
-      icon: <FontAwesome name="bell" color="white" size={30} />,
+      icon: <FaDashcube size={20} color="blue" />,
+
       children: [
         {
           id: 3,
           title: "About",
           route: "about",
-          icon: <FontAwesome name="bell" color="white" size={30} />,
+          icon: <FaDashcube size={20} color="blue" />,
         },
       ],
     },

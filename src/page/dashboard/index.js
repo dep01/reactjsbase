@@ -7,7 +7,6 @@ export default view(({}) => {
     <div
       style={{
         flex: 1,
-        marginLeft: 5,
         minHeight: "100vh",
         backgroundColor: BaseColors.icon.active,
       }}

@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import { BaseColors } from "../../../utils";
-import { Layout, Menu, Row, Typography, Col } from "antd";
+import { Layout, Menu, Row } from "antd";
 import { useHistory } from "react-router-dom";
 
 import { view } from "@risingstack/react-easy-state";
 import * as store from "./store";
 import { staticIcons } from "../../../utils/static";
-
 const { Sider } = Layout;
 const { SubMenu } = Menu;
 
@@ -24,7 +23,10 @@ export const AppSidebar = view(({}) => {
   return (
     <Sider
       trigger={null}
-      style={{ minHeight: "100vh", backgroundColor: BaseColors.secondary }}
+      style={{
+        minHeight: "100vh",
+        backgroundColor: BaseColors.secondary,
+      }}
     >
       <Row justify="center" align="middle" justify="center">
         <img src={staticIcons.ic_react} style={{ height: 80 }} />
@@ -40,7 +42,7 @@ export const AppSidebar = view(({}) => {
             return (
               <Menu.Item key={menu.id} onClick={() => GoTo(menu.route)}>
                 {menu.icon}
-                <span>{menu.title}</span>
+                <span style={styles.span}>{menu.title}</span>
               </Menu.Item>
             );
           } else {
@@ -50,7 +52,7 @@ export const AppSidebar = view(({}) => {
                 title={
                   <span>
                     {menu.icon}
-                    <span>{menu.title}</span>
+                    <span style={styles.span}>{menu.title}</span>
                   </span>
                 }
               >
@@ -58,7 +60,7 @@ export const AppSidebar = view(({}) => {
                   return (
                     <Menu.Item key={child.id} onClick={() => GoTo(child.route)}>
                       {child.icon}
-                      <span>{child.title}</span>
+                      <span style={styles.span}>{child.title}</span>
                     </Menu.Item>
                   );
                 })}
@@ -79,4 +81,5 @@ const styles = {
     alignItems: "start",
     backgroundColor: BaseColors.icon.active,
   },
+  span: { marginLeft: 5 },
 };

@@ -13,7 +13,9 @@ export default view(({}) => {
       <AppSidebar />
       <Layout style={styles.container}>
         <AppHeader />
-        <AppContent />
+        <Layout style={styles.containerContent}>
+          <AppContent />
+        </Layout>
         <AppFooter />
       </Layout>
     </Layout>
@@ -24,5 +26,12 @@ const styles = {
   container: {
     minHeight: "100vh",
     backgroundColor: BaseColors.primary,
+  },
+  containerContent: {
+    minHeight: "100vh",
+    marginLeft: 5,
+    borderRadius: 5,
+    backgroundColor: "blue",
+    padding: 20,
   },
 };
