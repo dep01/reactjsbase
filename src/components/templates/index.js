@@ -25,13 +25,14 @@ export default view(({}) => {
 const styles = {
   container: {
     minHeight: "100vh",
-    backgroundColor: BaseColors.primary,
+    backgroundColor: BaseColors.secondary,
   },
   containerContent: {
     minHeight: "100vh",
+    backgroundColor: BaseColors.secondary,
     marginLeft: 5,
-    borderRadius: 5,
-    backgroundColor: "blue",
+    border: `1px solid ${BaseColors.border.primary}`,
+    borderRightWidth: 0,
     padding: 20,
   },
 };

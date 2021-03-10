@@ -1,8 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { About, Test, Dashboard } from "../../../page";
-
-import router from "../../../router";
+import { About, Dashboard } from "../../../page";
 
 export default function AppContent(props) {
   return (
@@ -10,10 +8,7 @@ export default function AppContent(props) {
       <Route path="/about">
         <About />
       </Route>
-      <Route path="/test">
-        <Test />
-      </Route>
-      <Route path="/dashboard">
+      <Route path="">
         <Dashboard />
       </Route>
     </Switch>

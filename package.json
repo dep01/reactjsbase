@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/charts": "^1.0.19",
     "@ant-design/icons": "^4.5.0",
     "@ctrl/tinycolor": "^3.4.0",
     "@risingstack/react-easy-state": "^6.3.0",

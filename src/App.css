@@ -1,1 +1,10 @@
 @import "~antd/dist/antd.css";
+
+.sider-class {
+  background-color: #072a47;
+  color: #fff;
+}
+.sider-class-item {
+  background-color: #072a47;
+  color: #fff;
+}

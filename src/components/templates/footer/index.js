@@ -6,7 +6,7 @@ const { Footer } = Layout;
 export const AppFooter = ({}) => {
   return (
     <Footer style={styles.container}>
-      <p>footer</p>
+      <p>&copy;dep01 reactjs baseproject</p>
     </Footer>
   );
 };

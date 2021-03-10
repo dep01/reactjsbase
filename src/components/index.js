@@ -1,3 +1,3 @@
 import Layout from "./templates";
-
-export { Layout };
+import { LoadingOverlay } from "./loadingoverlay";
+export { Layout, LoadingOverlay };
