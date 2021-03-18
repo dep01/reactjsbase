@@ -8,3 +8,36 @@
   background-color: #072a47;
   color: #fff;
 }
+.true {
+  cursor: wait;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.true:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background: rgba(180, 180, 180, 0.5);
+  background-image: url("./ic_loading.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.true > button,
+.true > input,
+.true > select,
+.true > select {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.false {
+  background: transparent;
+  padding: 10px;
+  border-radius: 5px;
+}

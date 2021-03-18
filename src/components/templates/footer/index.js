@@ -1,5 +1,5 @@
 import React from "react";
-import { BaseColors } from "../../../utils";
+import { BaseTheme } from "../../../utils";
 import { Layout } from "antd";
 
 const { Footer } = Layout;
@@ -15,7 +15,7 @@ const styles = {
   container: {
     justifyContent: "center",
     alignItems: "start",
-    backgroundColor: BaseColors.secondary,
+    backgroundColor: BaseTheme.baseColor.secondary,
     marginLeft: 5,
   },
 };

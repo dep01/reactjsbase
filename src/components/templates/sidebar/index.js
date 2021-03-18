@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
-import { BaseColors } from "../../../utils";
+import { BaseTheme } from "../../../utils";
 import { Layout, Menu, Row, Button } from "antd";
 import { useHistory } from "react-router-dom";
 import { view } from "@risingstack/react-easy-state";
 import * as store from "../store";
-import { staticIcons } from "../../../utils/static";
 import * as FontAwesome from "react-icons/fa";
 const { Sider } = Layout;
 const { SubMenu } = Menu;
@@ -24,7 +23,7 @@ export const AppSidebar = view(({}) => {
       collapsed={store.state.isCollapse}
     >
       <Row justify="center" align="middle" justify="center">
-        <img src={staticIcons.ic_react} style={{ height: 80 }} />
+        <img src={BaseTheme.staticIcons.ic_react} style={{ height: 80 }} />
       </Row>
       <Menu mode="inline" defaultSelectedKeys={["1"]}>
         {store.state.menu.map((menu) => {
@@ -81,13 +80,13 @@ const styles = {
     minHeight: "100%",
     justifyContent: "center",
     alignItems: "start",
-    backgroundColor: BaseColors.icon.active,
+    backgroundColor: BaseTheme.baseColor.icon.active,
   },
   span: { marginLeft: 10 },
   sider: {
     minHeight: "100vh",
-    backgroundColor: BaseColors.secondary,
-    border: `0px solid ${BaseColors.border.primary}`,
+    backgroundColor: BaseTheme.baseColor.secondary,
+    border: `0px solid ${BaseTheme.baseColor.border.primary}`,
     borderRightWidth: 1,
   },
 };

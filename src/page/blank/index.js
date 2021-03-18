@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import { view } from "@risingstack/react-easy-state";
-import { BaseColors } from "../../utils";
 import * as store from "./store";
-import { LoadingOverlay } from "../../components";
 export default view(({}) => {
   useEffect(() => {
     store.initialized();
@@ -10,11 +8,9 @@ export default view(({}) => {
       store.cleanUp();
     };
   }, [store]);
-  return store.state.isLoading ? (
-    <LoadingOverlay />
-  ) : (
+  return (
     <div style={styles.container}>
-      <p>ini dashboard</p>
+      <p>ini blank</p>
     </div>
   );
 });

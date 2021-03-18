@@ -1,5 +1,5 @@
 import React from "react";
-import { BaseColors } from "../../../utils";
+import {BaseTheme} from "../../../utils";
 import { Layout, Button } from "antd";
 import * as store from "../store";
 import { view } from "@risingstack/react-easy-state";
@@ -19,7 +19,7 @@ export const AppHeader = view(({}) => {
       <Button
         type="primary"
         onClick={() => store.toggleCollapsed()}
-        style={{ marginLeft: -50, backgroundColor: BaseColors.icon.unactive }}
+        style={{ marginLeft: -50, backgroundColor: BaseTheme.baseColor.icon.unactive }}
       >
         {React.createElement(
           store.state.isCollapse ? MenuUnfoldOutlined : MenuFoldOutlined
@@ -34,7 +34,7 @@ const styles = {
     width: "100%",
     justifyContent: "center",
     alignItems: "start",
-    backgroundColor: BaseColors.icon.unactive,
+    backgroundColor: BaseTheme.baseColor.icon.unactive,
     marginBottom: 5,
   },
 };

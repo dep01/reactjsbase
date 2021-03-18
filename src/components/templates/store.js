@@ -1,4 +1,5 @@
 import { store } from "@risingstack/react-easy-state";
+import { GlobalStore } from "../../utils";
 export const state = store({
   menu: [],
   role_id: "",
@@ -54,6 +55,7 @@ export async function initialized() {
   ];
 }
 export function GoTo({ route = "", history }) {
+  GlobalStore.state.isLoading = true;
   history.push(`/${route}`);
 }
 

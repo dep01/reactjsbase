@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { view } from "@risingstack/react-easy-state";
-import { BaseColors } from "../../utils";
-
+import * as store from "./store";
 export default view(({}) => {
+  useEffect(() => {
+    store.initialized();
+    return () => {
+      store.cleanUp();
+    };
+  }, [store]);
   return (
-    <div
-      style={{
-        flex: 1,
-      }}
-    >
+    <div style={styles.container}>
       <p>ini about</p>
     </div>
   );
 });
+
+const styles = {
+  container: {
+    flex: 1,
+    minHeight: "100vh",
+  },
+};
